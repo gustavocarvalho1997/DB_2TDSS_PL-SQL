@@ -1,0 +1,77 @@
+--SELECT * FROM dados_de_vendas WHERE ORDERNUMBER = 10107 AND quantityordered = 27;
+--set serveroutput on;
+--DECLARE
+--    DADOS_TABELA DADOS_DE_VENDAS.QUANTITYORDERED%TYPE;
+--    DADOS_TABELA2 DADOS_DE_VENDAS.ORDERNUMBER%TYPE;
+--BEGIN
+--    SELECT quantityordered,ordernumber INTO DADOS_TABELA,DADOS_TABELA2 FROM dados_de_vendas WHERE ORDERNUMBER = 10107 AND quantityordered = 27;
+--    
+--    DBMS_OUTPUT.PUT_LINE(DADOS_TABELA || ' ' || dados_tabela2);
+--END;
+
+--CREATE TABLE REGISTRO_ALUNOS(
+--    RM VARCHAR2(30),
+--    ALUNO VARCHAR2(50)
+--);
+--INSERT INTO registro_alunos (
+--    rm,
+--    aluno
+--) VALUES (
+--    '111222333',
+--    'JOAO DA SILVA'
+--);
+--INSERT INTO registro_alunos (
+--    rm,
+--    aluno
+--) VALUES (
+--    '222333444',
+--    'MARIA DA SILVA'
+--);
+--INSERT INTO registro_alunos (
+--    rm,
+--    aluno
+--) VALUES (
+--    '333444555',
+--    'JOAO SANTOS DA SILVA'
+--);
+--COMMIT;
+
+
+
+
+
+set serveroutput on;
+DECLARE
+    DADOS_TABELA REGISTRO_ALUNOS.ALUNO%TYPE;
+    DADOS_TABELA2 REGISTRO_ALUNOS.RM%TYPE;
+BEGIN
+    SELECT ALUNO,RM INTO DADOS_TABELA,DADOS_TABELA2 FROM registro_alunos WHERE RM = '111222333';
+    
+    DBMS_OUTPUT.PUT_LINE('O ALUNO DE NOME: ' || DADOS_TABELA || ' TEM RM DE NUMERO: ' || dados_tabela2);
+END;
+
+DECLARE
+    DADO_UPDATE REGISTRO_ALUNOS.ALUNO%TYPE := 'JOAOZINHO123';
+BEGIN
+    UPDATE REGISTRO_ALUNOS SET ALUNO = DADO_UPDATE WHERE RM = '111222333';
+    COMMIT;
+END;
+
+DECLARE
+    DADO_DELETE REGISTRO_ALUNOS.RM%TYPE := '333444555';
+BEGIN
+    DELETE FROM REGISTRO_ALUNOS WHERE RM = DADO_DELETE;
+    COMMIT;
+END;
+
+SELECT * FROM REGISTRO_ALUNOS;
+
+
+
+
+
+
+
+
+
+

@@ -68,3 +68,27 @@ set serveroutput on;
 --        dbms_output.put_line('F');
 --    END IF;
 --END;
+
+
+-- TERMINAR COM IF ELSE
+DECLARE
+    valor_carro number := &VALOR;
+    t1 number := 1.10;
+    t2 number := 1.15;
+    t3 number := 1.20;
+    entrada number;
+    valor_carro_descontado number;
+    p1 number;
+    p2 number;
+    p3 number;
+    resultado varchar2;
+BEGIN
+    entrada := (valor_carro * 0.20);
+    valor_carro_descontado := (valor_carro - entrada);
+    
+    p1 := (valor_carro_descontado*t1)/6;
+    p2 := (valor_carro_descontado*t2)/12;
+    p3 := (valor_carro_descontado*t3)/18;
+    
+    dbms_output.put_line('O valor financiado foi de: R$' || valor_carro_descontado || ' , a entrada foi de: R$' || entrada || ' , ficando a parcela de R$' || p1 || ' em 6x, R$' || p2 || ' em 12x e R$' || p3 || ' em 18x'); 
+END;
