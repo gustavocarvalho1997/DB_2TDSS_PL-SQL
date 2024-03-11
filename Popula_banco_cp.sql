@@ -528,10 +528,46 @@ INSERT INTO movimento_estoque (
     30,
     2
 );
+-- INSERT
+INSERT INTO estoque (
+    cod_estoque,
+    nom_estoque
+) VALUES (
+    1,
+    'Estoque A'
+);
 
+INSERT INTO estoque (
+    cod_estoque,
+    nom_estoque
+) VALUES (
+    2,
+    'Estoque B'
+);
 
+INSERT INTO estoque (
+    cod_estoque,
+    nom_estoque
+) VALUES (
+    3,
+    'Estoque C'
+);
 
+INSERT INTO estoque (
+    cod_estoque,
+    nom_estoque
+) VALUES (
+    4,
+    'Estoque D'
+);
 
+INSERT INTO estoque (
+    cod_estoque,
+    nom_estoque
+) VALUES (
+    5,
+    'Estoque E'
+);
 
 
 
