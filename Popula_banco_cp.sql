@@ -568,8 +568,66 @@ INSERT INTO estoque (
     5,
     'Estoque E'
 );
+-- INSERT ESTOQUE PRODUTO
+INSERT INTO estoque_produto (
+    cod_produto,
+    cod_estoque,
+    dat_estoque,
+    qtd_produto
+) VALUES (
+    1,
+    1,
+    TO_DATE('01/01/2023', 'DD/MM/YYYY'),
+    100
+);
 
+INSERT INTO estoque_produto (
+    cod_produto,
+    cod_estoque,
+    dat_estoque,
+    qtd_produto
+) VALUES (
+    2,
+    2,
+    TO_DATE('02/01/2023', 'DD/MM/YYYY'),
+    150
+);
 
+INSERT INTO estoque_produto (
+    cod_produto,
+    cod_estoque,
+    dat_estoque,
+    qtd_produto
+) VALUES (
+    3,
+    3,
+    TO_DATE('03/01/2023', 'DD/MM/YYYY'),
+    200
+);
+
+INSERT INTO estoque_produto (
+    cod_produto,
+    cod_estoque,
+    dat_estoque,
+    qtd_produto
+) VALUES (
+    4,
+    4,
+    TO_DATE('04/01/2023', 'DD/MM/YYYY'),
+    250
+);
+
+INSERT INTO estoque_produto (
+    cod_produto,
+    cod_estoque,
+    dat_estoque,
+    qtd_produto
+) VALUES (
+    5,
+    5,
+    TO_DATE('05/01/2023', 'DD/MM/YYYY'),
+    300
+);
 
 
 
