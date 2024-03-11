@@ -408,9 +408,126 @@ INSERT INTO produto (
     to_date('01/01/2023', 'dd/MM/yyyy'),
     null
 );
+-- INSERT TIPO MOVIMENTO ESTOQUE
+INSERT INTO tipo_movimento_estoque (
+    cod_tipo_movimento_estoque,
+    des_tipo_movimento_estoque,
+    sta_saida_entrada
+) VALUES (
+    1,
+    'Entrada',
+    'E'
+);
 
+INSERT INTO tipo_movimento_estoque (
+    cod_tipo_movimento_estoque,
+    des_tipo_movimento_estoque,
+    sta_saida_entrada
+) VALUES (
+    2,
+    'Saída',
+    'S'
+);
 
+INSERT INTO tipo_movimento_estoque (
+    cod_tipo_movimento_estoque,
+    des_tipo_movimento_estoque,
+    sta_saida_entrada
+) VALUES (
+    3,
+    'Ajuste Positivo',
+    'A'
+);
 
+INSERT INTO tipo_movimento_estoque (
+    cod_tipo_movimento_estoque,
+    des_tipo_movimento_estoque,
+    sta_saida_entrada
+) VALUES (
+    4,
+    'Ajuste Negativo',
+    'N'
+);
+
+INSERT INTO tipo_movimento_estoque (
+    cod_tipo_movimento_estoque,
+    des_tipo_movimento_estoque,
+    sta_saida_entrada
+) VALUES (
+    5,
+    'Transferência',
+    'T'
+);
+-- INSERT MOVIMENTO ESTOQUE
+INSERT INTO movimento_estoque (
+    seq_movimento_estoque,
+    cod_produto,
+    dat_movimento_estoque,
+    qtd_movimentacao_estoque,
+    cod_tipo_movimento_estoque
+) VALUES (
+    1,
+    1,
+    TO_DATE('15/02/2023', 'DD/MM/YYYY'),
+    10,
+    2
+);
+
+INSERT INTO movimento_estoque (
+    seq_movimento_estoque,
+    cod_produto,
+    dat_movimento_estoque,
+    qtd_movimentacao_estoque,
+    cod_tipo_movimento_estoque
+) VALUES (
+    2,
+    1,
+    TO_DATE('18/02/2023', 'DD/MM/YYYY'),
+    20,
+    2
+);
+
+INSERT INTO movimento_estoque (
+    seq_movimento_estoque,
+    cod_produto,
+    dat_movimento_estoque,
+    qtd_movimentacao_estoque,
+    cod_tipo_movimento_estoque
+) VALUES (
+    3,
+    1,
+    TO_DATE('20/02/2023', 'DD/MM/YYYY'),
+    15,
+    2
+);
+
+INSERT INTO movimento_estoque (
+    seq_movimento_estoque,
+    cod_produto,
+    dat_movimento_estoque,
+    qtd_movimentacao_estoque,
+    cod_tipo_movimento_estoque
+) VALUES (
+    4,
+    1,
+    TO_DATE('25/02/2023', 'DD/MM/YYYY'),
+    25,
+    2
+);
+
+INSERT INTO movimento_estoque (
+    seq_movimento_estoque,
+    cod_produto,
+    dat_movimento_estoque,
+    qtd_movimentacao_estoque,
+    cod_tipo_movimento_estoque
+) VALUES (
+    5,
+    1,
+    TO_DATE('28/02/2023', 'DD/MM/YYYY'),
+    30,
+    2
+);
 
 
 
