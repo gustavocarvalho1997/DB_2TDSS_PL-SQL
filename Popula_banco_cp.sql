@@ -268,7 +268,72 @@ INSERT INTO vendedor (
     'Rafaela Almeida',
     'A'
 );
--- 
+-- INSERT CLIENTE VENDEDOS
+INSERT INTO cliente_vendedor (
+    cod_cliente,
+    cod_vendedor,
+    dat_inicio,
+    dat_termino
+) VALUES (
+    1,
+    1,
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+INSERT INTO cliente_vendedor (
+    cod_cliente,
+    cod_vendedor,
+    dat_inicio,
+    dat_termino
+) VALUES (
+    1,
+    2,
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+INSERT INTO cliente_vendedor (
+    cod_cliente,
+    cod_vendedor,
+    dat_inicio,
+    dat_termino
+) VALUES (
+    1,
+    3,
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+INSERT INTO cliente_vendedor (
+    cod_cliente,
+    cod_vendedor,
+    dat_inicio,
+    dat_termino
+) VALUES (
+    1,
+    4,
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+INSERT INTO cliente_vendedor (
+    cod_cliente,
+    cod_vendedor,
+    dat_inicio,
+    dat_termino
+) VALUES (
+    1,
+    5,
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+COMMIT;
+
+
+
+
+
 
 
 
