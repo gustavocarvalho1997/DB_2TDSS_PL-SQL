@@ -328,7 +328,92 @@ INSERT INTO cliente_vendedor (
     to_date('01/01/2023', 'dd/MM/yyyy'),
     null
 );
-COMMIT;
+-- INSERT PRODUTO
+INSERT INTO produto (
+    cod_produto,
+    nom_produto,
+    cod_barra,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    1,
+    'Ácido Sulfúrico',
+    '7890123456789',
+    'Ativo',
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+INSERT INTO produto (
+    cod_produto,
+    nom_produto,
+    cod_barra,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    2,
+    'Hidróxido de Sódio',
+    '1234567890123',
+    'Ativo',
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+INSERT INTO produto (
+    cod_produto,
+    nom_produto,
+    cod_barra,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    3,
+    'Ácido Clorídrico',
+    '4567890123456',
+    'Ativo',
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+INSERT INTO produto (
+    cod_produto,
+    nom_produto,
+    cod_barra,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    4,
+    'Sulfato de Amônio',
+    '7890123456780',
+    'Ativo',
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+INSERT INTO produto (
+    cod_produto,
+    nom_produto,
+    cod_barra,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    5,
+    'Sulfato de Cobre',
+    '8901234567890',
+    'Ativo',
+    to_date('01/01/2023', 'dd/MM/yyyy'),
+    null
+);
+
+
+
+
+
+
 
 
 
