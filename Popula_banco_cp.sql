@@ -628,11 +628,448 @@ INSERT INTO estoque_produto (
     TO_DATE('05/01/2023', 'DD/MM/YYYY'),
     300
 );
+-- INSERT HISTORICO PEDIDO
+INSERT INTO historico_pedido (
+    seq_historico_pedido,
+    cod_pedido,
+    cod_cliente,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente,
+    cod_vendedor
+) VALUES (
+    :v0,
+    :v1,
+    :v2,
+    :v3,
+    :v4,
+    :v5,
+    :v6,
+    :v7,
+    :v8,
+    :v9
+);
+-- INSERT PEDIDO
+INSERT INTO pedido (
+    cod_pedido,
+    cod_pedido_relacionado,
+    cod_cliente,
+    cod_usuario,
+    cod_vendedor,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente
+) VALUES (
+    1,
+    NULL,
+    1,
+    1,
+    1,
+    TO_DATE('01/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('10/01/2023', 'DD/MM/YYYY'),
+    100.50,
+    10.25,
+    1
+);
 
+INSERT INTO pedido (
+    cod_pedido,
+    cod_pedido_relacionado,
+    cod_cliente,
+    cod_usuario,
+    cod_vendedor,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente
+) VALUES (
+    2,
+    NULL,
+    1,
+    1,
+    1,
+    TO_DATE('02/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('11/01/2023', 'DD/MM/YYYY'),
+    150.75,
+    12.30,
+    1
+);
 
+INSERT INTO pedido (
+    cod_pedido,
+    cod_pedido_relacionado,
+    cod_cliente,
+    cod_usuario,
+    cod_vendedor,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente
+) VALUES (
+    3,
+    NULL,
+    1,
+    1,
+    1,
+    TO_DATE('03/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('12/01/2023', 'DD/MM/YYYY'),
+    200.00,
+    15.00,
+    1
+);
 
+INSERT INTO pedido (
+    cod_pedido,
+    cod_pedido_relacionado,
+    cod_cliente,
+    cod_usuario,
+    cod_vendedor,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente
+) VALUES (
+    4,
+    NULL,
+    1,
+    1,
+    1,
+    TO_DATE('04/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('13/01/2023', 'DD/MM/YYYY'),
+    250.25,
+    20.00,
+    1
+);
 
+INSERT INTO pedido (
+    cod_pedido,
+    cod_pedido_relacionado,
+    cod_cliente,
+    cod_usuario,
+    cod_vendedor,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente
+) VALUES (
+    5,
+    NULL,
+    1,
+    1,
+    1,
+    TO_DATE('05/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('14/01/2023', 'DD/MM/YYYY'),
+    300.50,
+    25.75,
+    1
+);
+-- INSERT ITEM PEDIDO
+INSERT INTO item_pedido (
+    cod_pedido,
+    cod_item_pedido,
+    cod_produto,
+    qtd_item,
+    val_unitario_item,
+    val_desconto_item
+) VALUES (
+    1,
+    1,
+    1,
+    5,
+    10.50,
+    2.00
+);
 
+INSERT INTO item_pedido (
+    cod_pedido,
+    cod_item_pedido,
+    cod_produto,
+    qtd_item,
+    val_unitario_item,
+    val_desconto_item
+) VALUES (
+    2,
+    2,
+    1,
+    3,
+    8.75,
+    1.50
+);
 
+INSERT INTO item_pedido (
+    cod_pedido,
+    cod_item_pedido,
+    cod_produto,
+    qtd_item,
+    val_unitario_item,
+    val_desconto_item
+) VALUES (
+    3,
+    3,
+    1,
+    7,
+    12.25,
+    2.50
+);
 
+INSERT INTO item_pedido (
+    cod_pedido,
+    cod_item_pedido,
+    cod_produto,
+    qtd_item,
+    val_unitario_item,
+    val_desconto_item
+) VALUES (
+    4,
+    4,
+    1,
+    4,
+    9.99,
+    1.75
+);
 
+INSERT INTO item_pedido (
+    cod_pedido,
+    cod_item_pedido,
+    cod_produto,
+    qtd_item,
+    val_unitario_item,
+    val_desconto_item
+) VALUES (
+    5,
+    5,
+    1,
+    6,
+    11.00,
+    2.25
+);
+-- INSERT HISTORICO_PEDIDO
+INSERT INTO historico_pedido (
+    seq_historico_pedido,
+    cod_pedido,
+    cod_cliente,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente,
+    cod_vendedor
+) VALUES (
+    1,
+    1,
+    1,
+    TO_DATE('01/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('10/01/2023', 'DD/MM/YYYY'),
+    100.00,
+    10.00,
+    1,
+    1
+);
+
+INSERT INTO historico_pedido (
+    seq_historico_pedido,
+    cod_pedido,
+    cod_cliente,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente,
+    cod_vendedor
+) VALUES (
+    2,
+    2,
+    1,
+    TO_DATE('02/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('11/01/2023', 'DD/MM/YYYY'),
+    150.00,
+    15.00,
+    1,
+    1
+);
+
+INSERT INTO historico_pedido (
+    seq_historico_pedido,
+    cod_pedido,
+    cod_cliente,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente,
+    cod_vendedor
+) VALUES (
+    3,
+    3,
+    1,
+    TO_DATE('03/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('12/01/2023', 'DD/MM/YYYY'),
+    200.00,
+    20.00,
+    1,
+    1
+);
+
+INSERT INTO historico_pedido (
+    seq_historico_pedido,
+    cod_pedido,
+    cod_cliente,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente,
+    cod_vendedor
+) VALUES (
+    4,
+    4,
+    1,
+    TO_DATE('04/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('13/01/2023', 'DD/MM/YYYY'),
+    250.00,
+    25.00,
+    1,
+    1
+);
+
+INSERT INTO historico_pedido (
+    seq_historico_pedido,
+    cod_pedido,
+    cod_cliente,
+    dat_pedido,
+    dat_cancelamento,
+    dat_entrega,
+    val_total_pedido,
+    val_desconto,
+    seq_endereco_cliente,
+    cod_vendedor
+) VALUES (
+    5,
+    5,
+    1,
+    TO_DATE('05/01/2023', 'DD/MM/YYYY'),
+    NULL,
+    TO_DATE('14/01/2023', 'DD/MM/YYYY'),
+    300.00,
+    30.00,
+    1,
+    1
+);
+-- INSERT PRODOTU COMPOSTO
+INSERT INTO produto_composto (
+    cod_produto_relacionado,
+    cod_produto,
+    qtd_produto,
+    qtd_produto_relacionado,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    1,
+    1,
+    10,
+    10,
+    'A',
+    TO_DATE('01/01/2023', 'DD/MM/YYYY'),
+    NULL
+);
+
+INSERT INTO produto_composto (
+    cod_produto_relacionado,
+    cod_produto,
+    qtd_produto,
+    qtd_produto_relacionado,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    2,
+    2,
+    20,
+    20,
+    'A',
+    TO_DATE('02/01/2023', 'DD/MM/YYYY'),
+    NULL
+);
+
+INSERT INTO produto_composto (
+    cod_produto_relacionado,
+    cod_produto,
+    qtd_produto,
+    qtd_produto_relacionado,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    3,
+    3,
+    30,
+    30,
+    'A',
+    TO_DATE('03/01/2023', 'DD/MM/YYYY'),
+    NULL
+);
+
+INSERT INTO produto_composto (
+    cod_produto_relacionado,
+    cod_produto,
+    qtd_produto,
+    qtd_produto_relacionado,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    4,
+    4,
+    40,
+    40,
+    'A',
+    TO_DATE('04/01/2023', 'DD/MM/YYYY'),
+    NULL
+);
+
+INSERT INTO produto_composto (
+    cod_produto_relacionado,
+    cod_produto,
+    qtd_produto,
+    qtd_produto_relacionado,
+    sta_ativo,
+    dat_cadastro,
+    dat_cancelamento
+) VALUES (
+    5,
+    5,
+    50,
+    50,
+    'A',
+    TO_DATE('05/01/2023', 'DD/MM/YYYY'),
+    NULL
+);
+commit;
