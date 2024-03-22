@@ -1,0 +1,21 @@
+-- 1
+/*BEGIN
+    FOR X IN ( SELECT * FROM MOVIMENTO_ESTOQUE ) LOOP
+        DBMS_OUTPUT.PUT_LINE('O numero do produto é:' || x.qtd_movimentacao_estoque );
+    END LOOP;
+end;*/
+
+-- 2
+DECLARE
+    CLIENTE NUMBER := &VALOR;
+    SOMATORIA NUMBER := 0;
+    DIVISOR NUMBER := 0;
+    RESULTADO NUMBER;
+BEGIN
+    FOR x IN ( SELECT * FROM PEDIDO P INNER JOIN CLIENTE C ON (P.COD_CLIENTE = C.COD_CLIENTE) WHERE P.COD_CLIENTE = CLIENTE) LOOP
+        SOMATORIA := SOMATORIA + X.VAL_TOTAL_PEDIDO;
+        DIVISOR := DIVISOR + 1;
+    END LOOP;
+    RESULTADO := SOMATORIA / DIVISOR;
+    DBMS_OUTPUT.PUT_LINE('A média dos valores totais é: ' || resultado );
+END;
