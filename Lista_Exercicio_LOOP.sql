@@ -37,9 +37,17 @@ BEGIN
     END LOOP;
     DBMS_OUTPUT.PUT_LINE('A somatória de movimentações desse produto é: ' || VAR_SOMATORIA_MOVIMENTACOES);
 END;*/
-        
-        
-        
+
+-- EXERCICIO 5        
+BEGIN
+    FOR x IN (SELECT * FROM PRODUTO_COMPOSTO C INNER JOIN PRODUTO P ON (C.COD_PRODUTO = P.COD_PRODUTO) LEFT JOIN ESTOQUE_PRODUTO E ON (P.COD_PRODUTO = E.COD_PRODUTO)) LOOP
+        IF x.COD_ESTOQUE IS NOT NULL THEN
+            DBMS_OUTPUT.PUT_LINE('O nome do produto é: ' || x.NOM_PRODUTO || ' o seu código de barras: ' || x.COD_BARRA || ' código de estoque: ' || x.COD_ESTOQUE || ' data de estoque: ' || x.DAT_ESTOQUE);
+        ELSE
+            DBMS_OUTPUT.PUT_LINE('O nome do produto é: ' || x.NOM_PRODUTO || ' o seu código de barras: ' || x.COD_BARRA);
+        END IF;
+    END LOOP;
+END;
       
         
         
