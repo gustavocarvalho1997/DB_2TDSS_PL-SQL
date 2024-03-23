@@ -1,12 +1,14 @@
--- 1
+SET SERVEROUTPUT ON;
+
+-- EXERCICIO 1
 /*BEGIN
     FOR X IN ( SELECT * FROM MOVIMENTO_ESTOQUE ) LOOP
         DBMS_OUTPUT.PUT_LINE('O numero do produto é:' || x.qtd_movimentacao_estoque );
     END LOOP;
 end;*/
 
--- 2
-DECLARE
+-- EXERCICIO 2
+/*DECLARE
     CLIENTE NUMBER := &VALOR;
     SOMATORIA NUMBER := 0;
     DIVISOR NUMBER := 0;
@@ -18,4 +20,45 @@ BEGIN
     END LOOP;
     RESULTADO := SOMATORIA / DIVISOR;
     DBMS_OUTPUT.PUT_LINE('A média dos valores totais é: ' || resultado );
-END;
+END;*/
+-- EXERCICIO 3
+/*BEGIN
+    FOR x IN (SELECT * FROM PRODUTO P INNER JOIN PRODUTO_COMPOSTO C ON (C.COD_PRODUTO = P.COD_PRODUTO) WHERE C.STA_ATIVO = 'A') LOOP
+        DBMS_OUTPUT.PUT_LINE(x.NOM_PRODUTO);
+    END LOOP;
+END;*/
+-- EXERCICIO 4   
+/*DECLARE
+    VAR_ID_PRODUTO NUMBER := &VALUE;
+    VAR_SOMATORIA_MOVIMENTACOES NUMBER := 0;
+BEGIN
+    FOR x IN ( SELECT * FROM MOVIMENTO_ESTOQUE M INNER JOIN TIPO_MOVIMENTO_ESTOQUE T ON (M.COD_TIPO_MOVIMENTO_ESTOQUE = T.COD_TIPO_MOVIMENTO_ESTOQUE) WHERE COD_PRODUTO = VAR_ID_PRODUTO) LOOP
+        VAR_SOMATORIA_MOVIMENTACOES := VAR_SOMATORIA_MOVIMENTACOES + x.QTD_MOVIMENTACAO_ESTOQUE;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('A somatória de movimentações desse produto é: ' || VAR_SOMATORIA_MOVIMENTACOES);
+END;*/
+        
+        
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
