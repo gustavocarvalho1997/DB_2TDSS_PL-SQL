@@ -3,7 +3,7 @@ SET SERVEROUTPUT ON;
 -- EXERCICIO 1
 /*BEGIN
     FOR X IN ( SELECT * FROM MOVIMENTO_ESTOQUE ) LOOP
-        DBMS_OUTPUT.PUT_LINE('O numero do produto é:' || x.qtd_movimentacao_estoque );
+        DBMS_OUTPUT.PUT_LINE('O total de movimentações é: ' || x.qtd_movimentacao_estoque );
     END LOOP;
 end;*/
 
@@ -49,7 +49,7 @@ END;*/
     END LOOP;
 END;*/
 -- EXERCICIO 6
-/*BEGIN
+BEGIN
     FOR x IN (SELECT * FROM PEDIDO P RIGHT JOIN CLIENTE C ON (P.COD_CLIENTE = C.COD_CLIENTE) WHERE COD_PEDIDO IS NOT NULL) LOOP
         IF x.NOM_CLIENTE IS NOT NULL THEN
             DBMS_OUTPUT.PUT_LINE('O código do pedido é: ' || x.COD_PEDIDO || ' a data do pedido é: ' || x.DAT_PEDIDO || ' o nome do cliente é: ' || x.NOM_CLIENTE || ' de cpf/CPJ: ' || x.NUM_CPF_CNPJ);
@@ -57,10 +57,10 @@ END;*/
             DBMS_OUTPUT.PUT_LINE('O código do pedido é: ' || x.COD_PEDIDO || ' a data do pedido é: ' || x.DAT_PEDIDO);
         END IF;
     END LOOP;
-END;*/
+END;
 
 -- EXERCICIO 7
-DECLARE
+/*DECLARE
     VAR_ID_CLIENTE NUMBER := &VALUE;
     VAR_NOME_CLIENTE CLIENTE.NOM_CLIENTE%TYPE;
     VAR_CPF_CNPJ CLIENTE.NUM_CPF_CNPJ%TYPE;
@@ -75,7 +75,7 @@ BEGIN
     END LOOP;
     VAR_RESULTADO := VAR_SOMATORIA/VAR_DIVISOR;
     DBMS_OUTPUT.PUT_LINE('O cliente: ' || VAR_NOME_CLIENTE || ' de CPF/CNPJ: ' || VAR_CPF_CNPJ || ' tem a média de valores de pedidos no valor de: R$' || VAR_RESULTADO);
-END;    
+END;    */
 
         
         
